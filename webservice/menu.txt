@@ -1,0 +1,10 @@
+Espresso
+Latte
+Coffee
+Capucino
+
+Hot Tea
+Chai Tea
+Herbal Tea
+
+Hot Chocolate
