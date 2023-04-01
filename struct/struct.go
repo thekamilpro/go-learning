@@ -35,6 +35,10 @@ func main() {
 				fmt.Printf("\t%10s%10.2f\n", size, price) //%10s is formatting verb
 			}
 		}
+	case "2":
+		fmt.Println("Please enter a name of new item:")
+		name, _ := in.ReadString('\n')
+		menu = append(menu, menuItem{name: name, prices: make(map[string]float64)})
 	}
 
 }
