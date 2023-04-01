@@ -22,14 +22,19 @@ func main() {
 
 	fmt.Println("Please select an option")
 	fmt.Println("1) Print Menu")
+	fmt.Println("2) Add item")
+	fmt.Println("q) quit")
 	choice, _ := in.ReadString('\n')
-	choice = strings.TrimSpace(choice)
 
-	for _, item := range menu {
-		fmt.Println(item.name)
-		fmt.Println(strings.Repeat("-", 10))
-		for size, price := range item.prices {
-			fmt.Printf("\t%10s%10.2f\n", size, price) //%10s is formatting verb
+	switch strings.TrimSpace(choice) {
+	case "1":
+		for _, item := range menu {
+			fmt.Println(item.name)
+			fmt.Println(strings.Repeat("-", 10))
+			for size, price := range item.prices {
+				fmt.Printf("\t%10s%10.2f\n", size, price) //%10s is formatting verb
+			}
 		}
 	}
+
 }
