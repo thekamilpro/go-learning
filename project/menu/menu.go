@@ -14,7 +14,7 @@ type menuItem struct {
 
 type menu []menuItem
 
-func (m menu) print() {
+func (m menu) print() { //this is a method for type menu
 	for _, item := range m {
 		fmt.Println(item.name)
 		fmt.Println(strings.Repeat("-", 10))
