@@ -24,7 +24,10 @@ loop: //this is label, it's what allows break statement to break out of this loo
 		case "1":
 			menu.Print()
 		case "2":
-			menu.Add()
+			err := menu.Add()
+			if err != nil { // true if an error occurs
+				fmt.Println(fmt.Errorf("invalid input: %w", err))
+			}
 		case "q":
 			break loop
 		default:
